@@ -1,0 +1,11 @@
+{% extends "hello/base.html" %}
+{% block content %}
+    <h1>Привет,{{ name }}</h1>
+    <form>
+    {% csrf_token %}
+    <button formaction="/exit" formmethod="post">Выход</button>
+    <button formaction="/join/{{ id }}/1" formmethod="post">Понравилось</button>
+    <button formaction="/join/{{ id }}/2" formmethod="post">Не понравилось</button>
+    <button formaction="/join/{{ id }}/3" formmethod="post">Не смотрел</button>
+    </form>
+{% endblock %}
