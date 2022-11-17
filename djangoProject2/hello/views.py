@@ -3,7 +3,10 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render,redirect,HttpResponse
 from .forms import AuthorizationForm
-from .models import Autorization,Reaction
+from .models import Autorization,Reaction,Film
+from random import randint
+import csv
+import pandas as pd
 from django.core.files.storage import FileSystemStorage
 import datetime
 from django import forms
@@ -26,9 +29,13 @@ def signin(request):
             password = form.cleaned_data.get("password")
             logins=get_all_users()
             print(logins)
-            if logins.get(login)[1]==password:
+            if logins.get(login)!=None and logins.get(login)[1]==password:
+                arr_films = Film.objects.all()
+                len_films = len(arr_films)
+                f = arr_films[randint(0, len_films - 1)]
                 dict_for_error.update({'name': login})
                 dict_for_error.update({'id':logins.get(login)[0]})
+                dict_for_error.update({'film':f.title})
                 return render(request,'hello/authorization.html',dict_for_error)
             else:
                 dict_for_error['error']=True
@@ -47,7 +54,6 @@ def signup(request):
             print(logins)
             if logins.get(login)==None:
                 dict_for_error.update({'name': login})
-                dict_for_error.update({'id': logins.get(login)[0]})
                 form.save()
                 return render(request,'hello/regist.html',dict_for_error)
             else:
@@ -56,14 +62,17 @@ def signup(request):
             dict_for_error['error']=True
         return render(request, 'hello/registration.html',dict_for_error)
 def send_reaction(request,id,number):
-    login=Autorization.objects.all().get(id=id).login
+    login=Autorization.objects.all().get(id=id)
     print(login)
-    dict={'id':id,"name":login}
+    arr_films=Film.objects.all()
+    len_films=len(arr_films)
+    f=arr_films[randint(0,len_films-1)]
+    dict={'id':id,"name":login.login,'film':f.title}
     if request.method=='POST':
             if number==1:
-                p=Reaction.objects.create(login=login,like="Понравилось")
+                p=Reaction.objects.create(login=login,like="Понравилось",film=f)
             elif number==2:
-                p=Reaction.objects.create(login=login,like="Не понравилось")
+                p=Reaction.objects.create(login=login,like="Не понравилось",film=f)
             else:
-                p=Reaction.objects.create(login=login,like="Не смотрел")
+                p=Reaction.objects.create(login=login,like="Не смотрел",film=f)
     return render(request,'hello/authorization.html',dict)
