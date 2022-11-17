@@ -17,6 +17,9 @@
  <label for="login">Логин</label><input type="text" name="login" placeholder="Введите логин" id="login" class="form-control"/><br>
     <label for="password">Пароль:</label><input id="password" type="password" name="password" placeholder="Введите пароль" class="form-control"/><br>
     <button formaction="/signup" formmethod="post" type="submit" value="Sign up" class="form-control btn btn-primary">Зарегестрироваться</button>
+    {% if error %}
+        <span>Ошибка при вводе</span>
+    {% endif %}
 </div>
 </form>
 {% endblock %}
