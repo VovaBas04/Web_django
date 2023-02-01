@@ -1,0 +1,41 @@
+{%extends 'films/base.html'%}
+
+{%block content%}
+<div class="features1">
+    <h1>Личный кабинет пользователя <i>{{username1}}</i></h1><br>
+    <hr>
+    <br><h1>Список последних просмотренных фильмов и ваша реакция</h1><br>
+    <hr>
+</div>
+    <table class="table-bold" border="3">
+        <thead>
+            <tr>
+                <th class="first">Фильм</th>
+                <th class="second">Описание фильма</th>
+                <th>Оценка фильма</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> {{first.title}}</td>
+                <td class="second">{{first_overflew}}</td>
+                <td>{{first.like}}</td>
+            </tr>
+            <tr>
+                <td> {{second.title}}</td>
+                <td>{{second_overflew}}</td>
+                <td>{{second.like}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" style="text-align:right">Количество оцененных фильмов на сервисе</td><td>{{ok}}</td>
+            </tr>
+        </tfoot>
+    </table>
+    <form>
+        {% csrf_token %}
+        <button class ="btn btn-light" formaction="/lkuser/0" formmethod="post">Удалить аккаунт</button>
+        <button class ="btn btn-light" formaction="/lkuser/1" formmethod="post">Изменить пароль</button>
+    </form>
+{%endblock%}

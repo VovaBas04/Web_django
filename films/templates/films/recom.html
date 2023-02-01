@@ -1,0 +1,24 @@
+{%extends 'films/base.html'%}
+{%load static%}
+{%block content%}
+<div class="regi">
+<h1> {{title}}</h1><br>
+<ul class="card-list">
+    <li>
+        <br>
+       <h2>Название фильма: {{post.title}}</h2>
+       <hr>
+        <h2>Режиссер: {{post.director}}</h2>
+        <hr>
+        <p>Описание: {{post.overflew}}</p>
+        <hr>
+    </li>
+</ul>
+<form>
+    {% csrf_token %}
+    <button class ="btn btn-success" formaction="/join/{{post.id}}/1" formmethod="post">Понравилось</button>
+    <button class ="btn btn-danger" formaction="/join/{{post.id}}/2" formmethod="post">Не понравилось</button>
+    <button class ="btn btn-light" formaction="/join/{{post.id}}/3" formmethod="post">Не смотрел</button>
+</form>
+</div>
+{%endblock%}
