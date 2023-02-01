@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+
+  db:
+    image: mysql
+    container_name: sqlite3
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: '12345678'
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

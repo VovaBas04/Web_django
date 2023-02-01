@@ -1,0 +1,257 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: Tahoma;
+}
+
+aside{
+    float:left;
+    background:linear-gradient(to top, #2c2c2c,#000000);
+    width: 22%;
+    padding: 2.5%;
+    height: 150vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside .card{
+    width: 80%;
+    margin:10px auto;
+    padding: 5px;
+    background-color: #000;
+    box-shadow: 0 5px 10px #fff;
+    border-radius: 50px;
+}
+
+aside .logo-img{
+    display:block;
+    width: 170px;
+    height: 105px;
+    margin: 5px auto;
+    border-radius: 25%;
+}
+
+aside .logo{
+    font-size: 28px;
+    text-align: center;
+    color:#fff;
+    margin-top: 50px;
+    font-weight: bold;
+    text-shadow: 1px 2px 5px #ccc;
+}
+aside h3{
+    margin-top: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 1px 2px 3px #ccc;
+}
+
+aside ul{list-style: none;}
+aside ul li{
+    color: #fff;;
+    display: block;
+    font-size: 18px;
+    margin-top: 25px;
+    transition: transform .6s ease;
+    text-shadow: 1px 2px 3px #ccc;
+}
+aside ul li:hover, aside ul a{
+    color: #ca3737;
+    font-size: 18px;
+    text-decoration: none;
+    transform:scale(1.1);
+}
+
+main .features {
+    float: right;
+    color: #fff;
+    margin-top: 100px;
+    text-align:center;
+    width: 75%;
+}
+
+main .regi{
+    float:right;
+    color: #fff;
+    margin-top: 100px;
+    text-align:center;
+    width: 75%;
+    padding-left: 10px;
+}
+main .regi h1{font-size: 70px;font-weight: bold;text-shadow: 2px 2px 2px #ccc;position: relative;z-index: 2;}
+main .regi h2{position: relative;z-index: 2;font-size: 30px;font-weight: bold; margin: 20px;text-align: center;word-spacing: 5px;text-shadow: 1px 1px 1px #ccc;}
+main .regi p{position: relative;z-index: 2;padding: 10px 15px 10px 25px;max-width: 1000px; margin: 20px auto;font-size: 16px;font-weight: bold;text-align: center;line-height: 1.7; border: 2px solid #ccc;border-radius: 10px;box-shadow: 2px 2px 5px #000 inset;word-spacing: 5px;text-shadow: 0.5px 0.5px 0.5px #ccc;}
+main .features h1{position: relative;z-index: 2;font-size: 70px;font-weight: bold;}
+main .features h2{position: relative;z-index: 2;font-size: 50px}
+main .features p{position: relative;z-index: 2;max-width: 540px; margin: 50px auto;font-size: 13px;}
+
+main .regi img{
+    position: relative;z-index: 2;
+    width: 350px;
+    float:left
+}
+
+main .regi ul.card-list{
+    padding-left: 0;
+    font-size: 14px;
+    list-style-type: none
+}
+
+main .features1 {
+    position: relative;z-index: 2;
+    float: right;
+    color: #fff;
+    margin-top: 100px;
+    text-align:center;
+    width: 75%;
+}
+
+main .features1 h1{font-size: 40px;font-weight: bold;padding-right: 10px;}
+main .features1 p{font-size: 20px;font-weight: bold;}
+
+.alert-warning {
+    float: left;
+    clear:both;
+    width: 250px;
+    margin: 20px 34%;
+    text-align: left;
+    font-weight: bold;
+}
+.leftcol{
+    position: relative; /* Абсолютное позиционирование */
+     top: 20px; /* Положение от верхнего края */ 
+     width: 300px; /* Ширина блока */
+     background: #fc3; /* Цвет фона */
+     border: 1px solid #000; /* Параметры рамки */
+     padding: 10px; /* Поля вокруг текста */
+}
+.midcol { 
+    position: relative; /* Относительное позиционирование */
+    background: maroon;
+    top: -64px;
+    width: 300px;
+    right: -20%;
+    padding: 10px; /* Поля вокруг текста */
+    color: white; /* Цвет текста */
+    border: 1px solid #000; /* Параметры рамки */
+    margin: 20px 240px 0 140px; /* Отступы вокруг блока */
+   }
+.rightcol { 
+    position: relative; /* Абсолютное позиционирование */
+    top: 10px; /* Положение от верхнего края */
+    width: 500px;
+    right: -850px;
+    top: -121px; /* Положение от правого края */
+    background: #ccc; /* Цвет фона */
+    border: 1px solid black; /* Параметры рамки */
+    padding: 10px; /* Поля вокруг текста */
+   }
+form{
+    position: relative;z-index: 2;
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
+.form-input {
+    width: 300px;
+    font-size: 16px;
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 200px;
+    font-size: 18px;
+    vertical-align: top;
+    position: relative;
+    font-weight: bold;
+    top: 10px;
+}
+
+.form-error ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #eb5959;
+    font-weight: bold;
+}
+
+.form-button {
+    min-width: 200px;
+    font-size: 16px;
+}
+main .backgroundcolor{
+    width: 100vw;
+    height: 100vh;
+    background: -webkit-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+            -webkit-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+            -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+            -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+            -webkit-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+            -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: -moz-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+            -moz-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+            -moz-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+            -moz-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+            -moz-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+            -moz-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+            linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+            linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+            linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+            linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+            linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-size: 20px 20px;
+    background-color: #131313;
+    position:fixed;
+    top:0; left: 297px;
+    z-index: 0;
+}
+
+
+main table{
+    position: relative;z-index: 2;
+    color:red;
+    border: 3px solid grey;
+    background:rgb(41, 38, 38);
+    border-collapse: collapse;
+    border-radius: 10px
+}
+main .table-bold{
+    position: relative;z-index: 2;
+    font-weight:bold;
+    width:75%;
+    margin: auto;
+    text-align: center;
+}
+
+main .table-bold th.first{
+    width: 20%;
+    text-align: center;
+}
+main .table-bold th.second{
+    width: 65%;
+}
+main .table-bold td.second{
+    text-align: center;
+    line-height: 1.6;
+    font-size: 16px;
+}
+main .table-bold td{
+    text-align: center;
+}
+
+main tr {
+    color:#fff;
+}
+main th{
+    color : #fff;
+    padding: 10px; 
+    border: 1px solid grey;
+    border-right: 20px;
+    padding: 10px;
+    text-align: center;
+}
+main td{
+    border: 1px solid grey;
+    padding: 15px;
+}
